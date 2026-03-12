@@ -16,6 +16,10 @@ app.use("/books", bookRoutes);
 
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.send("Library API running");
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
